@@ -1,8 +1,8 @@
-createjs = require './lib/createjs.min'
-Math2    = require './lib/Math2'
-spine    = require './lib/Spine'
+createjs = require '../lib/createjs'
+Math2    = require '../lib/Math2'
+spine    = require '../lib/Spine'
 
-class Spine extends createjs.Container
+class createjs.Spine extends createjs.Container
 
   constructor: (atlas, json) ->
     super
@@ -11,7 +11,7 @@ class Spine extends createjs.Container
     @containers = []
     @pages = []
 
-    @textureLoader = new Spine.TextureLoader
+    @textureLoader = new createjs.Spine.TextureLoader
     @textureLoader.addEventListener 'success', => @textureLoadHandler()
 
     @queue = new createjs.LoadQueue(true)
@@ -146,7 +146,7 @@ class Spine extends createjs.Container
         slotContainer.rotation = -slot.bone.worldRotation
         slotContainer.alpha = slot.a
 
-class Spine.TextureLoader extends createjs.EventDispatcher
+class createjs.Spine.TextureLoader extends createjs.EventDispatcher
 
   load: (page, path, atlas) ->
     @page = page
@@ -159,4 +159,4 @@ class Spine.TextureLoader extends createjs.EventDispatcher
     texture.destroy()
     @dispatchEvent('error')
 
-module.exports = Spine
+module.exports = createjs.Spine
