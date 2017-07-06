@@ -1,0 +1,21 @@
+{
+  "name": "createjs-spine",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "coffee src/index.coffee",
+    "build": "coffee -c -o dist src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "devDependencies": {
+    "coffee-script": "^1.12.6",
+    "git-hooks-win": "^1.1.11"
+  }
+}
