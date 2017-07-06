@@ -1,4 +1,4 @@
-# Createjs-Spine
+# CreateJS-Spine
 =============
 
 Rendering a Spine animation with CreateJS
